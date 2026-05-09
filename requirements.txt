@@ -1,0 +1,4 @@
+requests
+rank-bm25
+loguru
+python-dotenv
