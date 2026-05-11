@@ -2,6 +2,7 @@ from logging_config import logger
 from chat_request import chatRequest 
 from config import MODEL_NAME, URL
 from text_prcessor import TextProcessor
+from system_prompt import SYSTEM_PROMPT
 def _bootstrap():
     textProcessor = TextProcessor.createTextProcessor()
     return textProcessor
@@ -20,7 +21,7 @@ def main():
     print(f"{MODEL_NAME} chat console started. Type 'exit' to quit.")
     messages = [
         {"role": "system", 
-         "content": "You are a helpful assistant. Answer briefly and concisely."
+         "content": SYSTEM_PROMPT
          }
     ]
     while True:
